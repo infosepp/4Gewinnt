@@ -26,11 +26,21 @@ public class Modell
         
     }
 
+    /**
+     * Wenn der Spieler noch Steine vorhanden hat, holt sich das Modell den Stein vom aktuellen Spieler.
+     * Die aktuell mögliche Zeile wird ermittelt. Sollte diese != -1 sein, wird das Modell mit dem
+     * Stein an aktueller Position erweitert. Sollte noch kein Spieler gewionnen haben, wird der 
+     * Spieler gewechselt.
+     */
     public void setzeStein(int spalte)
     {
         
     }
 
+    /**
+     * Hier wird die aktuelle Zeile zurückgegeben. Sollte auch die oberste Zeile belegt sein, wird - 1
+     * zurück gegeben.
+     */
     public int gibZeile(int spalte)
     {
         
@@ -46,6 +56,9 @@ public class Modell
        
     }
 
+    /**
+     * Hier werden alle Pruefemethoden aufgerufen. 
+     */
     public boolean pruefeGewonnen ()
     {
         
