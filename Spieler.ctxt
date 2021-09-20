@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=Spieler
+comment0.text=\r\n\ Beschreiben\ Sie\ hier\ die\ Klasse\ Spieler.\r\n\ \r\n\ @author\ (Ihr\ Name)\ \r\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\r\n
+comment1.params=color
+comment1.target=Spieler(java.awt.Color)
+comment1.text=\r\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Spieler\r\n
+comment2.params=
+comment2.target=void\ initSteine()
+comment3.params=
+comment3.target=boolean\ steineVorhanden()
+comment4.params=
+comment4.target=java.awt.Color\ getColor()
+comment5.params=
+comment5.target=boolean\ istStartspieler()
+comment6.params=
+comment6.target=Stein\ setzeStein()
+numComments=7

@@ -1,0 +1,27 @@
+#BlueJ class context
+comment0.target=Modell
+comment0.text=\r\n\ Beschreiben\ Sie\ hier\ die\ Klasse\ Modell.\r\n\ \r\n\ @author\ (Ihr\ Name)\ \r\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\r\n
+comment1.params=
+comment1.target=Modell()
+comment1.text=\r\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Modell\r\n
+comment10.params=
+comment10.target=boolean\ pruefeVierDiagonalLR()
+comment11.params=
+comment11.target=boolean\ pruefeVierDiagonalRL()
+comment2.params=
+comment2.target=Stein[][]\ gibSteine()
+comment3.params=spalte
+comment3.target=void\ setzeStein(int)
+comment4.params=spalte
+comment4.target=int\ gibZeile(int)
+comment5.params=
+comment5.target=java.awt.Color\ gibFarbeAktuellerSpieler()
+comment6.params=
+comment6.target=void\ spielerWechseln()
+comment7.params=
+comment7.target=boolean\ pruefeGewonnen()
+comment8.params=
+comment8.target=boolean\ pruefeVierInEinerSpalte()
+comment9.params=
+comment9.target=boolean\ pruefeVierInEinerZeile()
+numComments=12
