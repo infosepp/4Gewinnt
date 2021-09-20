@@ -4,7 +4,7 @@ import java.awt.Color;
 /**
  * Beschreiben Sie hier die Klasse VierGewinnt. => Modell
  * 
- * @author (Ihr Name) 
+ * @author (Huhu) 
  * @version (eine Versionsnummer oder ein Datum)
  */
 public class Controller
