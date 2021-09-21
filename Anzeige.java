@@ -21,7 +21,10 @@ public class Anzeige
     {
         
     }
-
+    
+    /**
+     * Aktuallisiert die Anzeige
+     */
     public void updateView()
     {
        
@@ -31,7 +34,11 @@ public class Anzeige
     {
         
     }
-
+    
+    /**
+     * Gibt das Fenster(View) zurück
+     * @return View 
+     */
     public View getView()
     {
         
