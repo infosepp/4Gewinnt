@@ -2,7 +2,7 @@ import sas.*;
 import sasio.*;
 import java.awt.Color;
 /**
- * Beschreiben Sie hier die Klasse Anzeige.
+ * Die Klasse Anzeige regelt die Grafik des Spiels
  * 
  * @author (Luka und Leon) 
  * 
