@@ -45,6 +45,7 @@ public class Modell
     /**
      * Hier wird die aktuelle Zeile zurückgegeben. Sollte auch die oberste Zeile belegt sein, wird - 1
      * zurück gegeben.
+     * @return int
      */
     public int gibZeile(int spalte)
     {
