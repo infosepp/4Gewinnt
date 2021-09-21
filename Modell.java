@@ -20,7 +20,12 @@ public class Modell
     {
         
     }
-
+    
+    /**
+     * Gibt ein 2D-Array mit allen Steinen zurück
+     * 
+     * @return Stein[][]
+     */    
     public Stein [][] gibSteine()
     {
         
@@ -40,17 +45,27 @@ public class Modell
     /**
      * Hier wird die aktuelle Zeile zurückgegeben. Sollte auch die oberste Zeile belegt sein, wird - 1
      * zurück gegeben.
+     * @return int
      */
     public int gibZeile(int spalte)
     {
         
     }
-
+    
+    /**
+     * Gib die Farbe von aktuellerSpieler zurück
+     * 
+     * @return Color
+     */
     public Color gibFarbeAktuellerSpieler()
     {
         
     }
-
+    
+    /**
+     * Überprüft, welcher Spieler im Attribut AktuellerSpieler gespeichert ist und setzt den anderen 
+     * Spieler als AktuellerSpieler. 
+     */
     private void spielerWechseln()
     {
        

@@ -4,8 +4,8 @@ import java.awt.Color;
 /**
  * Beschreiben Sie hier die Klasse VierGewinnt. => Modell
  * 
- * @author (Ihr Name) 
- * @version (eine Versionsnummer oder ein Datum)
+ * @author (Tom, Joshua) 
+ * @version (21.09.2021)
  */
 public class Controller
 {
@@ -42,6 +42,11 @@ public class Controller
         }
     }
     
+    /**
+     * 
+     * Diese Methode aktualisiert View
+     * 
+     */
     private void updateView()
     {
         
