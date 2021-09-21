@@ -12,4 +12,4 @@ VERSION oder DATUM:
 WIE IST DAS PROJEKT ZU STARTEN:
 AUTOR(EN):
 BENUTZERHINWEISE:
-Haha das is ja garnicht leer
+"Man kann das nicht bearbeiten"
