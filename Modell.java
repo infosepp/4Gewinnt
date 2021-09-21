@@ -80,11 +80,19 @@ public class Modell
         
     }
 
+    /**
+     * Wenn vier Steine einer gleichen Farbe in einer Spalte nebeneinanderliegen gebe true zurück, ansonsten false.
+     * @return Wahrheitswert
+     */
     private boolean pruefeVierInEinerSpalte ()
     {
         
     }       
 
+    /**
+     * Wenn vier Steine einer gleichen Farbe in einer Zeile nebeneinanderliegen gebe true zurück, ansonsten false.
+     * @return Wahrheitswert
+     */
     private boolean pruefeVierInEinerZeile ()
     {
         
