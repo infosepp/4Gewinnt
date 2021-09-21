@@ -20,7 +20,12 @@ public class Modell
     {
         
     }
-
+    
+    /**
+     * Gibt ein 2D-Array mit allen Steinen zurück
+     * 
+     * @return Stein[][]
+     */    
     public Stein [][] gibSteine()
     {
         
@@ -45,12 +50,21 @@ public class Modell
     {
         
     }
-
+    
+    /**
+     * Gib die Farbe von aktuellerSpieler zurück
+     * 
+     * @return Color
+     */
     public Color gibFarbeAktuellerSpieler()
     {
         
     }
-
+    
+    /**
+     * Überprüft, welcher Spieler im Attribut AktuellerSpieler gespeichert ist und setzt den anderen 
+     * Spieler als AktuellerSpieler. 
+     */
     private void spielerWechseln()
     {
        
@@ -64,37 +78,21 @@ public class Modell
         
     }
 
-    /**
-     * Wenn vier Steine einer gleichen Farbe in einer Spalte nebeneinanderliegen gebe true zurück, ansonsten false.
-     * @return Wahrheitswert
-     */
     private boolean pruefeVierInEinerSpalte ()
     {
         
     }       
 
-    /**
-     * Wenn vier Steine einer gleichen Farbe in einer Zeile nebeneinanderliegen gebe true zurück, ansonsten false.
-     * @return Wahrheitswert
-     */
     private boolean pruefeVierInEinerZeile ()
     {
         
     }
 
-    /**
-     * Wenn vier Steine einer Farbe in einer Diagonalen von links nach rechts vorhanden sind, gebe true zurück, ansonsten false.
-     * @return Wahrheitswert
-     */
     private boolean pruefeVierDiagonalLR ()
     {
         
     }
 
-    /**
-     * Wenn vier Steine einer Farbe in einer Diagonalen von rechts nach links vorhanden sind, gebe true zurück, ansonsten false.
-     * @return Wahrheitswert
-     */
     private boolean pruefeVierDiagonalRL ()
     {
         
