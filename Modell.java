@@ -74,11 +74,19 @@ public class Modell
         
     }
 
+    /**
+     * Wenn vier Steine einer Farbe in einer Diagonalen von links nach rechts vorhanden sind, gebe true zurück, ansonsten false.
+     * @return Wahrheitswert
+     */
     private boolean pruefeVierDiagonalLR ()
     {
         
     }
 
+    /**
+     * Wenn vier Steine einer Farbe in einer Diagonalen von rechts nach links vorhanden sind, gebe true zurück, ansonsten false.
+     * @return Wahrheitswert
+     */
     private boolean pruefeVierDiagonalRL ()
     {
         
