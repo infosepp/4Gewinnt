@@ -2,8 +2,8 @@ import java.awt.Color;
 /**
  * Beschreiben Sie hier die Klasse Modell.
  * 
- * @author (Ihr Name) 
- * @version (eine Versionsnummer oder ein Datum)
+ * @author (Antonia) 
+ * @version (21.09.21)
  */
 public class Modell
 {
@@ -64,11 +64,19 @@ public class Modell
         
     }
 
+    /**
+     * Wenn vier Steine einer gleichen Farbe in einer Spalte nebeneinanderliegen gebe true zurück, ansonsten false.
+     * @return Wahrheitswert
+     */
     private boolean pruefeVierInEinerSpalte ()
     {
         
     }       
 
+    /**
+     * Wenn vier Steine einer gleichen Farbe in einer Zeile nebeneinanderliegen gebe true zurück, ansonsten false.
+     * @return Wahrheitswert
+     */
     private boolean pruefeVierInEinerZeile ()
     {
         
