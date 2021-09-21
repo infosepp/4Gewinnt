@@ -31,7 +31,10 @@ public class Spieler
     {
         
     }
-    
+   /**
+    *Gibt die Frabe der Objekte zurück.
+    * @return Color 
+    */ 
     public Color getColor()
     {
         
@@ -41,7 +44,10 @@ public class Spieler
     {
         
     }
-    
+    /**
+     *Setzt den Stein
+     *@return Stein 
+     */
     public Stein setzeStein()
     {
         
