@@ -4,8 +4,9 @@ import java.awt.Color;
 /**
  * Beschreiben Sie hier die Klasse Anzeige.
  * 
- * @author (Ihr Name) 
- * @version (eine Versionsnummer oder ein Datum)
+ * @author (Luka und Leon) 
+ * 
+ * @version (21.09.2021)
  */
 public class Anzeige
 {
@@ -16,6 +17,7 @@ public class Anzeige
 
     /**
      * Konstruktor für Objekte der Klasse Anzeige
+     * @param modell Modell übergibt das Modell
      */
     public Anzeige(Modell modell)
     {
@@ -29,7 +31,11 @@ public class Anzeige
     {
        
     }
-
+    
+    /**
+     *Methode gibt die Buttons zurück
+     *@return Button[]  
+     */
     public Button [] getButtons()
     {
         
@@ -44,3 +50,4 @@ public class Anzeige
         
     }
 }
+
