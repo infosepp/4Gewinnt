@@ -73,7 +73,8 @@ public class Modell
     }
 
     /**
-     * Hier werden alle Pruefemethoden aufgerufen. 
+     * Hier werden alle Pruefemethoden aufgerufen.
+     * @return Wahrheitswert
      */
     public boolean pruefeGewonnen ()
     {
@@ -100,7 +101,7 @@ public class Modell
 
     /**
      * Wenn vier Steine einer Farbe in einer Diagonalen von links nach rechts vorhanden sind, gebe true zurück, ansonsten false.
-     * return Wahrheitswert
+     * @return Wahrheitswert
      */
     private boolean pruefeVierDiagonalLR ()
     {
@@ -109,7 +110,7 @@ public class Modell
 
     /**
      * Wenn vier Steine einer Farbe in einer Diagonalen von rechts nach links vorhanden sind, gebe true zurück, ansonsten false.
-     * return Wahrheitswert
+     * @return Wahrheitswert
      */
     private boolean pruefeVierDiagonalRL ()
     {
