@@ -22,7 +22,7 @@ public class Modell
     }
     
     /**
-     * Gibt ein 2D-Array mit allen Steinen zurück
+     * Gibt ein 2D-Array mit allen im Attribut modell gespeicherten Steinen zurück
      * 
      * @return Stein[][]
      */    
@@ -45,6 +45,7 @@ public class Modell
     /**
      * Hier wird die aktuelle Zeile zurückgegeben. Sollte auch die oberste Zeile belegt sein, wird - 1
      * zurück gegeben.
+     
      * @return int
      */
     public int gibZeile(int spalte)
@@ -53,7 +54,7 @@ public class Modell
     }
     
     /**
-     * Gib die Farbe von aktuellerSpieler zurück
+     * Gib die Farbe des Attributes aktuellerSpieler zurück
      * 
      * @return Color
      */
@@ -79,21 +80,37 @@ public class Modell
         
     }
 
+    /**
+     * Wenn vier Steine einer gleichen Farbe in einer Spalte nebeneinanderliegen gebe true zurück, ansonsten false.
+     * @return Wahrheitswert
+     */
     private boolean pruefeVierInEinerSpalte ()
     {
         
     }       
 
+    /**
+     * Wenn vier Steine einer gleichen Farbe in einer Zeile nebeneinanderliegen gebe true zurück, ansonsten false.
+     * @return Wahrheitswert
+     */
     private boolean pruefeVierInEinerZeile ()
     {
         
     }
 
+    /**
+     * Wenn vier Steine einer Farbe in einer Diagonalen von links nach rechts vorhanden sind, gebe true zurück, ansonsten false.
+     * return Wahrheitswert
+     */
     private boolean pruefeVierDiagonalLR ()
     {
         
     }
 
+    /**
+     * Wenn vier Steine einer Farbe in einer Diagonalen von rechts nach links vorhanden sind, gebe true zurück, ansonsten false.
+     * return Wahrheitswert
+     */
     private boolean pruefeVierDiagonalRL ()
     {
         
