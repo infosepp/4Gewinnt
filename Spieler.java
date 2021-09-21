@@ -3,8 +3,8 @@ import java.awt.Color;
 /**
  * Beschreiben Sie hier die Klasse Spieler.
  * 
- * @author (Ihr Name) 
- * @version (eine Versionsnummer oder ein Datum)
+ * @author Raphaél und Alex
+ * @version 21.09.2021
  */
 public class Spieler
 {
@@ -22,26 +22,43 @@ public class Spieler
         
     }
     
+    /**
+     * 
+     */
     public void initSteine()
     {
         
     }
     
+    /**
+     * 
+     */
     public boolean steineVorhanden()
     {
         
     }
     
+    /**
+     * Gibt die Farbe der Objekte zurück.
+     * @return Color
+     */
     public Color getColor()
     {
         
     }
     
+    /**
+     * 
+     */
     public boolean istStartspieler()
     {
         
     }
     
+    /**
+     * Setzt den Stein.
+     * @return Stein
+     */
     public Stein setzeStein()
     {
         
