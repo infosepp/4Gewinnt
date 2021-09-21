@@ -20,7 +20,12 @@ public class Modell
     {
         
     }
-
+    
+    /**
+     * Gibt ein 2D-Array mit allen im Attribut modell gespeicherten Steinen zurück
+     * 
+     * @return Stein[][]
+     */    
     public Stein [][] gibSteine()
     {
         
@@ -40,17 +45,28 @@ public class Modell
     /**
      * Hier wird die aktuelle Zeile zurückgegeben. Sollte auch die oberste Zeile belegt sein, wird - 1
      * zurück gegeben.
+     
+     * @return int
      */
     public int gibZeile(int spalte)
     {
         
     }
-
+    
+    /**
+     * Gib die Farbe des Attributes aktuellerSpieler zurück
+     * 
+     * @return Color
+     */
     public Color gibFarbeAktuellerSpieler()
     {
         
     }
-
+    
+    /**
+     * Überprüft, welcher Spieler im Attribut AktuellerSpieler gespeichert ist und setzt den anderen 
+     * Spieler als AktuellerSpieler. 
+     */
     private void spielerWechseln()
     {
        
@@ -64,11 +80,19 @@ public class Modell
         
     }
 
+    /**
+     * Wenn vier Steine einer gleichen Farbe in einer Spalte nebeneinanderliegen gebe true zurück, ansonsten false.
+     * @return Wahrheitswert
+     */
     private boolean pruefeVierInEinerSpalte ()
     {
         
     }       
 
+    /**
+     * Wenn vier Steine einer gleichen Farbe in einer Zeile nebeneinanderliegen gebe true zurück, ansonsten false.
+     * @return Wahrheitswert
+     */
     private boolean pruefeVierInEinerZeile ()
     {
         
@@ -76,7 +100,7 @@ public class Modell
 
     /**
      * Wenn vier Steine einer Farbe in einer Diagonalen von links nach rechts vorhanden sind, gebe true zurück, ansonsten false.
-     * @return Wahrheitswert
+     * return Wahrheitswert
      */
     private boolean pruefeVierDiagonalLR ()
     {
@@ -85,7 +109,7 @@ public class Modell
 
     /**
      * Wenn vier Steine einer Farbe in einer Diagonalen von rechts nach links vorhanden sind, gebe true zurück, ansonsten false.
-     * @return Wahrheitswert
+     * return Wahrheitswert
      */
     private boolean pruefeVierDiagonalRL ()
     {
