@@ -4,7 +4,7 @@ import java.awt.Color;
 /**
  * Beschreiben Sie hier die Klasse Stein.
  * 
- * @author (Felix, Marvin) 
+ * @author (Felix, Marvin)
  * @version (21.09.21)
  */
 public class Stein
