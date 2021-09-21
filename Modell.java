@@ -73,7 +73,8 @@ public class Modell
     }
 
     /**
-     * Hier werden alle Pruefemethoden aufgerufen. 
+     * Hier werden alle Pruefemethoden aufgerufen.
+     * @return Wahrheitswert
      */
     public boolean pruefeGewonnen ()
     {
