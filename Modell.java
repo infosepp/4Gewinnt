@@ -8,7 +8,7 @@ import java.awt.Color;
 public class Modell
 {
     // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
-    private Stein [][] modell;
+    private Stein [][] modell; //6/7 erste Stelle Zeilen, zweite Stelle die Spalten
     private Spieler aktuellerSpieler;
     private Spieler spieler1;
     private Spieler spieler2;
@@ -101,7 +101,7 @@ public class Modell
 
     /**
      * Wenn vier Steine einer Farbe in einer Diagonalen von links nach rechts vorhanden sind, gebe true zurück, ansonsten false.
-     * return Wahrheitswert
+     * @return Wahrheitswert
      */
     private boolean pruefeVierDiagonalLR ()
     {
@@ -110,7 +110,7 @@ public class Modell
 
     /**
      * Wenn vier Steine einer Farbe in einer Diagonalen von rechts nach links vorhanden sind, gebe true zurück, ansonsten false.
-     * return Wahrheitswert
+     * @return Wahrheitswert
      */
     private boolean pruefeVierDiagonalRL ()
     {
