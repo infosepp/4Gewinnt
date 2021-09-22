@@ -3,8 +3,8 @@ import java.awt.Color;
 /**
  * Beschreiben Sie hier die Klasse Spieler.
  * 
- * @author (Ihr Name) 
- * @version (eine Versionsnummer oder ein Datum)
+ * @author Alex und Raphaél
+ * @version 21.09.2021
  */
 public class Spieler
 {
@@ -31,7 +31,10 @@ public class Spieler
     {
         
     }
-    
+   /**
+    *Gibt die Frabe der Objekte zurück.
+    * @return Color 
+    */ 
     public Color getColor()
     {
         
@@ -41,7 +44,10 @@ public class Spieler
     {
         
     }
-    
+    /**
+     *Setzt den Stein
+     *@return Stein 
+     */
     public Stein setzeStein()
     {
         
