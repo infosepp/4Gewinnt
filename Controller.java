@@ -4,13 +4,8 @@ import java.awt.Color;
 /**
  * Beschreiben Sie hier die Klasse VierGewinnt. => Modell
  * 
-<<<<<<< HEAD
- * @author (Huhu) 
- * @version (eine Versionsnummer oder ein Datum)
-=======
  * @author (Tom, Joshua) 
  * @version (21.09.2021)
->>>>>>> 37e19d8a6757cecb7abd9db8e8b509e97d7424e7
  */
 public class Controller
 {
