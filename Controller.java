@@ -44,7 +44,7 @@ public class Controller
     
     /**
      * 
-     * Diese Methode aktualisiert View
+     * Diese Methode aktualisiert das View-Objekt
      * 
      */
     private void updateView()

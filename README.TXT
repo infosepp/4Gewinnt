@@ -6,11 +6,11 @@ alles, was er/sie wissen muss. Üblicherweise sollte der Kommentar
 zumindest die folgenden Angaben umfassen:
 ------------------------------------------------------------------------
 
-PROJEKTBEZEICHNUNG:
-PROJEKTZWECK:
-VERSION oder DATUM:
-WIE IST DAS PROJEKT ZU STARTEN:
-AUTOR(EN):
+PROJEKTBEZEICHNUNG: Das Spiel 4-Gewinnt als 2-Spielervariante
+PROJEKTZWECK: Erlernen und Wiederholung der OOM und OOP
+VERSION oder DATUM: 22.09.21
+WIE IST DAS PROJEKT ZU STARTEN: Objekt Controller erzeugen und Methode start aufrufen
+AUTOR(EN): 
 BENUTZERHINWEISE:
 -------------------------------------------------
 "Man kann das nicht bearbeiten"
