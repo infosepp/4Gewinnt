@@ -58,7 +58,6 @@ public class Modell
      */
     public int gibZeile(int spalte)
     {
-<<<<<<< HEAD
         for(int i = modell.length -1; i > 0 ; i--)
         {
             if(modell[i][spalte].getColor() == null)
@@ -67,9 +66,6 @@ public class Modell
             }                    
         }
         return -1;
-=======
-
->>>>>>> 0d6c163b659b3163ac5b406fbe228b21648e3a4b
     }
 
     /**
@@ -88,7 +84,6 @@ public class Modell
      */
     private void spielerWechseln()
     {
-<<<<<<< HEAD
        if(aktuellerSpieler == spieler1)
        {
            aktuellerSpieler = spieler2;
@@ -97,9 +92,6 @@ public class Modell
        {
            aktuellerSpieler = spieler1;
        }
-=======
-
->>>>>>> 0d6c163b659b3163ac5b406fbe228b21648e3a4b
     }
 
     /**
@@ -146,7 +138,6 @@ public class Modell
      */
     private boolean pruefeVierDiagonalLR ()
     {
-<<<<<<< HEAD
         int zahl = 0;
         int laenge = 0;
         if (modell.length < modell[0].length){
@@ -174,9 +165,6 @@ public class Modell
         {
             return false;   
         }
-=======
->>>>>>> 0d6c163b659b3163ac5b406fbe228b21648e3a4b
-
     }
 
     /**
