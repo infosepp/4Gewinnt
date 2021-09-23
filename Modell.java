@@ -18,7 +18,9 @@ public class Modell
      */
     public Modell()
     {
-        
+        modell = new Stein[6][7];
+        spieler1 = new Spieler(Color.red);
+        spieler2 = new Spieler(Color.yellow);
     }
     
     /**
@@ -28,7 +30,7 @@ public class Modell
      */    
     public Stein [][] gibSteine()
     {
-        
+        return modell;
     }
 
     /**
@@ -63,7 +65,7 @@ public class Modell
      */
     public Color gibFarbeAktuellerSpieler()
     {
-        
+        return aktuellerSpieler.getColor();
     }
     
     /**
