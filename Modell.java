@@ -139,6 +139,7 @@ public class Modell
     private boolean pruefeVierDiagonalLR(Spieler pAktuellerSpieler)
     {
 
+
         for(int i = 0; i < 3; i++){
             for(int j = 0; j < 4; j++){
                 Color steinFarbe = modell[i][j].getColor();
@@ -154,6 +155,7 @@ public class Modell
             }
         }
         return false;
+
 
     }
 
