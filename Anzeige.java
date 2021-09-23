@@ -1,5 +1,5 @@
+
 import sas.*;
-import sasio.*;
 import java.awt.Color;
 /**
  * Die Klasse Anzeige regelt die Grafik des Spiels
@@ -14,6 +14,7 @@ public class Anzeige
     private View fenster;
     private Modell modell;
     private Circle [] buttons;
+    private Circle [][]steinCircles = new Circle[6][7];
 
     /**
      * Konstruktor für Objekte der Klasse Anzeige
@@ -36,17 +37,23 @@ public class Anzeige
     {
         for(int i = 0; i < 700; i = i + 100)
         {
-            buttons[i/100] = new Circle(i+50,50, 100, modell.gibFarbeAktuellerSpieler());
+            buttons[i/100] = new Circle(i+50,50,100,modell.gibFarbeAktuellerSpieler());
         }
+
         // weitere Spielfeldgestaltung
         Stein[][] steine = modell.gibSteine();
         
         for(int i = 0; i< steine.length; i++){
             for(int j = 0; j< steine[i].length; j++){
                 
+                if( steine[steine.length-1 -i][j].getColor() == null){
+                    steinCircles[i][j] = new Circle(j*100+50,i*100+150,100, Color.white);
+                }else{
+                    steinCircles[i][j] = new Circle(j*100+50,i*100+150,100, steine[steine.length-1 -i][j].getColor());
+                }
             }
         }
-        
+
     }
 
     /**
@@ -54,9 +61,9 @@ public class Anzeige
      *
      * @return Button[]  
      */
-    public Button [] getButtons()
+    public Circle [] getButtons()
     {
-        
+        return buttons;
     }
 
     /**
@@ -66,7 +73,7 @@ public class Anzeige
      */
     public View getView()
     {
-
+        return fenster;
     }
 }
 
