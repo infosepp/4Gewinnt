@@ -43,7 +43,7 @@ public class Anzeige
         
         for(int i = 0; i< steine.length; i++){
             for(int j = 0; j< steine[i].length; j++){
-                
+                new Circle(i+50,j+150,100, steine[steine.length -1 -i][steine[i].length-1 -j].getColor());
             }
         }
         
