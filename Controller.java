@@ -21,6 +21,7 @@ public class Controller
     {
         modell = new Modell();
         anzeige = new Anzeige(modell);
+
     }
 
     /**
