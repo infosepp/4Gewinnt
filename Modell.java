@@ -2,8 +2,13 @@ import java.awt.Color;
 /**
  * Beschreiben Sie hier die Klasse Modell.
  * 
+<<<<<<< HEAD
  * @author (Antonia) 
  * @version (21.09.21)
+=======
+ * @author (Henning Ainödhofer) 
+ * @version (22.09.21, 16:20)
+>>>>>>> bc55c6027ff18d76a50606db6bb62f62cb2efcdd
  */
 public class Modell
 {
@@ -36,6 +41,8 @@ public class Modell
      * Die aktuell mögliche Zeile wird ermittelt. Sollte diese != -1 sein, wird das Modell mit dem
      * Stein an aktueller Position erweitert. Sollte noch kein Spieler gewionnen haben, wird der 
      * Spieler gewechselt.
+     * 
+     * @param spalte - gibt die Spalte an, die vom Spieler gewählt wurde (Spaltenzählung ab 0)
      */
     public void setzeStein(int spalte)
     {
@@ -45,8 +52,9 @@ public class Modell
     /**
      * Hier wird die aktuelle Zeile zurückgegeben. Sollte auch die oberste Zeile belegt sein, wird - 1
      * zurück gegeben.
-     
-     * @return int
+     * 
+     * @param spalte - gibt die Spalte an, die vom Spieler gewählt wurde (Spaltenzählung ab 0)
+     * @return zeilenwert - gibt die Zeile an, die von oben gesehen noch frei ist
      */
     public int gibZeile(int spalte)
     {
