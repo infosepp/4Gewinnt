@@ -138,7 +138,28 @@ public class Modell
      */
     private boolean pruefeVierDiagonalLR ()
     {
-        
+        for (int i = 0; i < modell.length; i++)
+        {
+            for (int j= 3; j < modell[i].length; j++)
+            {
+               if (modell[i][j].getColor() != null)
+               {
+                   int gleiche = 0; 
+                   for (int k = 0; k < 4; k++)
+                   {
+                       if (modell[i-k][j-k].getColor() == modell[i][j].getColor())
+                       {
+                           gleiche++;
+                       }
+                   }
+                   if (gleiche == 4)
+                   {
+                       return true;
+                   }
+               }
+            }
+        }
+        return false;
     }
 
     /**
@@ -147,6 +168,6 @@ public class Modell
      */
     private boolean pruefeVierDiagonalRL ()
     {
-
+        
     }
 }
