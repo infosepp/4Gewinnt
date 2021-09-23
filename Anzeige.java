@@ -14,7 +14,7 @@ public class Anzeige
     private View fenster;
     private Modell modell;
     private Circle [] buttons;
-    private Circle [][]steinCircles = new Circle[6][7];
+    private Circle [][]steinCircles;
 
     /**
      * Konstruktor für Objekte der Klasse Anzeige
@@ -23,6 +23,7 @@ public class Anzeige
     public Anzeige(Modell modell)
     {
         fenster = new View(700, 700, "4 Gewinnt");
+        steinCircles = new Circle[6][7];
     }
 
     /**
