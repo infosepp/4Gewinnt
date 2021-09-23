@@ -4,7 +4,8 @@ import java.awt.Color;
 /**
  * Beschreiben Sie hier die Klasse Stein.
  * 
- * @author (Felix, Marvin)
+ *
+ * @author (Felix, Marvin) 
  * @version (21.09.21)
  */
 public class Stein
@@ -40,6 +41,8 @@ public class Stein
     
     /**
      * Gibt die aktuelle x-Koordinate des Steins an.
+     * 
+     * @return x
      */
     public int getX()
     {
@@ -48,6 +51,8 @@ public class Stein
     
     /**
      * Gibt die aktuelle y-Koordinate des Steins an.
+     * 
+     * @return y
      */
     public int getY()
     {
@@ -56,6 +61,8 @@ public class Stein
     
     /**
      * Setzt eine neue x-Koordinate des Steins fest.
+     * 
+     * @param x - neue x-Koordinate des Steins
      */
     public void setX(int x)
     {
@@ -64,6 +71,8 @@ public class Stein
     
     /**
      * Setzt eine neue y-Koordinate des Steins fest.
+     * 
+     * @param y - neue y-Koordinate des Steins
      */
     public void setY(int y)
     {
@@ -72,6 +81,8 @@ public class Stein
     
     /**
      * Gibt den aktuellen Radius, also die Größe des Steins an.
+     * 
+     * @return radius
      */
     public int getRadius()
     {
@@ -80,6 +91,8 @@ public class Stein
     
     /**
      * Gibt die aktuelle Farbe des Steins an.
+     * 
+     * @return color - Die Farbe des Steins
      */
     public Color getColor()
     {
