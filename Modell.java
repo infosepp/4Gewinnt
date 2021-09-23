@@ -120,8 +120,25 @@ public class Modell
      */
     private boolean pruefeVierInEinerSpalte ()
     {
-
-    }       
+        
+        for (int i=0; i < modell[0].length; i++)
+        {
+            for (int j= modell.length-1; j > 2; j--)
+            {
+                if (modell[i][j].getColor() == aktuellerSpieler.getColor() && modell[i][j] != null)
+                {
+                    if (
+                    modell[i-1][j].getColor() == aktuellerSpieler.getColor() &&
+                    modell[i-2][j].getColor() == aktuellerSpieler.getColor() &&
+                    modell[i-3][j].getColor() == aktuellerSpieler.getColor())
+                    {
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
+    }
 
     /**
      * Wenn vier Steine einer gleichen Farbe in einer Zeile nebeneinanderliegen gebe true zurück, ansonsten false.
@@ -136,7 +153,30 @@ public class Modell
      * Wenn vier Steine einer Farbe in einer Diagonalen von links nach rechts vorhanden sind, gebe true zurück, ansonsten false.
      * @return Wahrheitswert
      */
-    private boolean pruefeVierDiagonalLR ()
+    private boolean pruefeVierDiagonalLR(Spieler pAktuellerSpieler)
+    {
+        for(int i = 0; i < 3; i++){
+            for(int j = 0; j < 4; j++){
+                Color steinFarbe = modell[i][j].getColor();
+                if(steinFarbe == pAktuellerSpieler.getColor()){
+                    if(steinFarbe == modell[i+1][j+1].getColor() && 
+                    steinFarbe == modell[i+2][j+2].getColor() &&
+                    steinFarbe == modell[i+3][j+3].getColor()){
+
+                        return true;
+
+                    }
+                }
+            }
+        }
+        return false;
+    }
+
+    /**
+     * Wenn vier Steine einer Farbe in einer Diagonalen von rechts nach links vorhanden sind, gebe true zurück, ansonsten false.
+     * @return Wahrheitswert
+     */
+    private boolean pruefeVierDiagonalRL ()
     {
         for (int i = 0; i < modell.length; i++)
         {
@@ -160,14 +200,5 @@ public class Modell
             }
         }
         return false;
-    }
-
-    /**
-     * Wenn vier Steine einer Farbe in einer Diagonalen von rechts nach links vorhanden sind, gebe true zurück, ansonsten false.
-     * @return Wahrheitswert
-     */
-    private boolean pruefeVierDiagonalRL ()
-    {
-        
     }
 }
