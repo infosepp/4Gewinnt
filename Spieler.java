@@ -19,6 +19,7 @@ public class Spieler
      */
     public Spieler(Color color)
     {
+        this.color = color;
         
     }
     
@@ -27,7 +28,7 @@ public class Spieler
      */
     public void initSteine()
     {
-        
+        steine = new Stein[21];
     }
     
     /**
@@ -37,7 +38,15 @@ public class Spieler
      */
     public boolean steineVorhanden()
     {
+        if(steine[steine.length-1] == null)
+        {
+            return true;
+        }
         
+        else
+        {
+            return false;
+        }
     }
     
    /**
@@ -50,7 +59,7 @@ public class Spieler
     }
     
     /**
-     * Gibt zurück, ob der aktuelle Stein das Steinobjekt an Position 17 im Array steine ist,
+     * Gibt zurück, ob der aktuelle Stein das Steinobjekt an Position 20 im Array steine ist,
      * da damit der Spieler auch der Startspieler ist.
      * 
      * @return Wahrheitswert
