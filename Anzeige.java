@@ -13,7 +13,7 @@ public class Anzeige
     // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
     private View fenster;
     private Modell modell;
-    private Button [] buttons;
+    private Circle [] buttons;
 
     /**
      * Konstruktor für Objekte der Klasse Anzeige
@@ -36,9 +36,23 @@ public class Anzeige
     {
         for(int i = 0; i < 700; i = i + 100)
         {
+<<<<<<< HEAD
             buttons[i/100] = new Button(i,0, 100, 100,"V", modell.gibFarbeAktuellerSpieler());
         }
         // weitere Spielfeldgestaltung
+=======
+            buttons[i/100] = new Circle(i+50,50, 100, modell.gibFarbeAktuellerSpieler());
+        }
+        // weitere Spielfeldgestaltung
+        Stein[][] steine = modell.gibSteine();
+        
+        for(int i = 0; i< steine.length; i++){
+            for(int j = 0; j< steine[i].length; j++){
+                
+            }
+        }
+        
+>>>>>>> 345a1e42d0fdc79ddccb749bbb9557d1538cb201
     }
 
     /**

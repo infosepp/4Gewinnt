@@ -19,7 +19,9 @@ public class Controller
      */
     public Controller()
     {
-
+        modell = new Modell();
+        anzeige = new Anzeige(modell);
+     
     }
 
     /**
