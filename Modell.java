@@ -65,7 +65,7 @@ public class Modell
      */
     public Color gibFarbeAktuellerSpieler()
     {
-        
+        return aktuellerSpieler.getColor();
     }
     
     /**
