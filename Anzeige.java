@@ -1,5 +1,4 @@
 import sas.*;
-import sasio.*;
 import java.awt.Color;
 /**
  * Die Klasse Anzeige regelt die Grafik des Spiels
@@ -62,7 +61,11 @@ public class Anzeige
      */
     public Button [] getButtons()
     {
+<<<<<<< HEAD
 
+=======
+        return buttons;
+>>>>>>> d94246adf4e6f54eb921123d1b8ad06d3db05650
     }
 
     /**
@@ -72,7 +75,7 @@ public class Anzeige
      */
     public View getView()
     {
-
+        return fenster;
     }
 }
 
