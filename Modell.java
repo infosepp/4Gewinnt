@@ -18,9 +18,11 @@ public class Modell
      */
     public Modell()
     {
-        
+        modell = new Stein[6][7];
+        spieler1 = new Spieler(Color.red);
+        spieler2 = new Spieler(Color.yellow);
     }
-    
+
     /**
      * Gibt ein 2D-Array mit allen im Attribut modell gespeicherten Steinen zurück
      * 
@@ -28,7 +30,7 @@ public class Modell
      */    
     public Stein [][] gibSteine()
     {
-        
+        return modell;
     }
 
     /**
@@ -41,7 +43,10 @@ public class Modell
      */
     public void setzeStein(int spalte)
     {
-        
+        if (gibZeile(spalte) != -1)
+        {
+            modell[gibZeile(spalte)][spalte] = aktuellerSpieler.setzeStein();
+        }
     }
 
     /**
@@ -53,6 +58,7 @@ public class Modell
      */
     public int gibZeile(int spalte)
     {
+<<<<<<< HEAD
         for(int i = modell.length -1; i > 0 ; i--)
         {
             if(modell[i][spalte].getColor() == null)
@@ -61,8 +67,11 @@ public class Modell
             }                    
         }
         return -1;
+=======
+
+>>>>>>> 0d6c163b659b3163ac5b406fbe228b21648e3a4b
     }
-    
+
     /**
      * Gib die Farbe des Attributes aktuellerSpieler zurück
      * 
@@ -70,15 +79,16 @@ public class Modell
      */
     public Color gibFarbeAktuellerSpieler()
     {
-        
+        return aktuellerSpieler.getColor();
     }
-    
+
     /**
      * Überprüft, welcher Spieler im Attribut AktuellerSpieler gespeichert ist und setzt den anderen 
      * Spieler als AktuellerSpieler. 
      */
     private void spielerWechseln()
     {
+<<<<<<< HEAD
        if(aktuellerSpieler == spieler1)
        {
            aktuellerSpieler = spieler2;
@@ -87,6 +97,9 @@ public class Modell
        {
            aktuellerSpieler = spieler1;
        }
+=======
+
+>>>>>>> 0d6c163b659b3163ac5b406fbe228b21648e3a4b
     }
 
     /**
@@ -95,7 +108,7 @@ public class Modell
      */
     public boolean pruefeGewonnen ()
     {
-        
+
     }
 
     /**
@@ -104,7 +117,7 @@ public class Modell
      */
     private boolean pruefeVierInEinerSpalte ()
     {
-        
+
     }       
 
     /**
@@ -113,7 +126,7 @@ public class Modell
      */
     private boolean pruefeVierInEinerZeile ()
     {
-        
+
     }
 
     /**
@@ -122,6 +135,7 @@ public class Modell
      */
     private boolean pruefeVierDiagonalLR ()
     {
+<<<<<<< HEAD
         int zahl = 0;
         int laenge = 0;
         if (modell.length < modell[0].length){
@@ -149,6 +163,8 @@ public class Modell
         {
             return false;   
         }
+=======
+>>>>>>> 0d6c163b659b3163ac5b406fbe228b21648e3a4b
 
     }
 
@@ -158,6 +174,6 @@ public class Modell
      */
     private boolean pruefeVierDiagonalRL ()
     {
-        
+
     }
 }
