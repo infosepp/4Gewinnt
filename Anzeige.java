@@ -1,3 +1,4 @@
+
 import sas.*;
 import java.awt.Color;
 /**
@@ -47,7 +48,7 @@ public class Anzeige
         
         for(int i = 0; i< steine.length; i++){
             for(int j = 0; j< steine[i].length; j++){
-                
+                new Circle(j*100+50,i*100+150,100, steine[steine.length-1 -i][steine[i].length -1 -j].getColor());
             }
         }
         
@@ -59,7 +60,7 @@ public class Anzeige
      *
      * @return Button[]  
      */
-    public Button [] getButtons()
+    public Circle [] getButtons()
     {
 <<<<<<< HEAD
 
