@@ -3,7 +3,7 @@ import java.awt.Color;
 /**
  * Beschreiben Sie hier die Klasse Spieler.
  * 
- * @author Alex und Raphaél
+ * @author Raphaél und Alex
  * @version 21.09.2021
  */
 public class Spieler
@@ -11,7 +11,7 @@ public class Spieler
     // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
     private Color color;
     private Stein [] steine;
-    
+
     private int aktuellerStein;
 
     /**
@@ -23,7 +23,7 @@ public class Spieler
     aktuellerStein = 20;
     initSteine();
     }
-    
+
     /**
      * Weist dem Array steine neue Steinobjekte zu.
      */
@@ -35,7 +35,7 @@ public class Spieler
          steine[i] = new Stein(7, 6,10, color);   
         }
     }
-    
+
     /**
      * Gibt zurück, ob in dem Array steine noch Steinobjekte vorhanden sind.
      * 
@@ -47,22 +47,22 @@ public class Spieler
         {
             return true;
         }
-        
+
         else
         {
             return false;
         }
     }
-    
-   /**
-    * Gibt die Frabe der Objekte zurück.
-    * @return Color 
-    */ 
+
+    /**
+     * Gibt die Farbe der Objekte zurück.
+     * @return Color 
+     */ 
     public Color getColor()
     {
-        
+        return color;
     }
-    
+
     /**
      * Gibt zurück, ob der aktuelle Stein das Steinobjekt an Position 20 im Array steine ist,
      * da damit der Spieler auch der Startspieler ist.
@@ -71,9 +71,17 @@ public class Spieler
      */
     public boolean istStartspieler()
     {
-        
+        boolean rickroll = false;
+        if(steine[20] == null)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
-    
+
     /**
      * Diese Methode nimmt den aktuellen Stein aus dem Array (=> null setzen) und gibt
      * das Objekt an dieser Position zurück. Der Wert aktuellerStein wird um 1 verringert.
@@ -82,6 +90,9 @@ public class Spieler
      */
     public Stein setzeStein()
     {
-        
+        Stein akt = steine[aktuellerStein];
+        steine[aktuellerStein] = null;
+        aktuellerStein--;
+        return akt;
     }
 }
