@@ -39,11 +39,11 @@ public class Spieler
     {
 
     }
-
-    /**
-     * Gibt die Frabe der Objekte zurück.
-     * @return Color 
-     */ 
+    
+   /**
+    * Gibt die Frabe der Objekte zurück.
+    * @return Color 
+    */ 
     public Color getColor()
     {
 
