@@ -29,9 +29,10 @@ public class Spieler
     {
 
     }
-    
+
     /**
      * Gibt zurück, ob in dem Array steine noch Steinobjekte vorhanden sind.
+     * 
      * @return Wahrheitswert
      */
     public boolean steineVorhanden()
@@ -60,10 +61,6 @@ public class Spieler
     }
 
     /**
-   
-     * Setzt den Stein.
-     * @return Stein
-    =======
      * Diese Methode nimmt den aktuellen Stein aus dem Array (=> null setzen) und gibt
      * das Objekt an dieser Position zurück. Der Wert aktuellerStein wird um 1 verringert.
      * 
