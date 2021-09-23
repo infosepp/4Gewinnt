@@ -2,13 +2,8 @@ import java.awt.Color;
 /**
  * Beschreiben Sie hier die Klasse Modell.
  * 
-<<<<<<< HEAD
- * @author (Antonia) 
- * @version (21.09.21)
-=======
  * @author (Henning Ainödhofer) 
  * @version (22.09.21, 16:20)
->>>>>>> bc55c6027ff18d76a50606db6bb62f62cb2efcdd
  */
 public class Modell
 {
@@ -33,7 +28,7 @@ public class Modell
      */    
     public Stein [][] gibSteine()
     {
-        
+        return modell;
     }
 
     /**
@@ -86,7 +81,18 @@ public class Modell
      */
     public boolean pruefeGewonnen ()
     {
-        
+        if(pruefeVierInEinerSpalte() == true || pruefeVierInEinerZeile() == true)
+        {
+            return true;
+        }
+        else if(pruefeVierDiagonalLR() == true || pruefeVierDiagonalRL() == true)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     /**
