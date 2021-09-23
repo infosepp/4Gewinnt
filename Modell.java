@@ -28,7 +28,7 @@ public class Modell
      */    
     public Stein [][] gibSteine()
     {
-        
+        return modell;
     }
 
     /**
