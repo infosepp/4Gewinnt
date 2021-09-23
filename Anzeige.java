@@ -14,6 +14,7 @@ public class Anzeige
     private View fenster;
     private Modell modell;
     private Circle [] buttons;
+    private Circle [][]steinCircles = new Circle[6][7];
 
     /**
      * Konstruktor für Objekte der Klasse Anzeige
@@ -22,6 +23,7 @@ public class Anzeige
     public Anzeige(Modell modell)
     {
         fenster = new View(700, 700, "4 Gewinnt");
+        steinCircles = new Circle[6][7];
     }
 
     /**
@@ -36,7 +38,7 @@ public class Anzeige
     {
         for(int i = 0; i < 700; i = i + 100)
         {
-            buttons[i/100] = new Circle(i+50,50,100,"V", modell.gibFarbeAktuellerSpieler());
+            buttons[i/100] = new Circle(i+50,50,100,modell.gibFarbeAktuellerSpieler());
         }
 
         // weitere Spielfeldgestaltung
@@ -44,7 +46,7 @@ public class Anzeige
         
         for(int i = 0; i< steine.length; i++){
             for(int j = 0; j< steine[i].length; j++){
-                new Circle(j*100+50,i*100+150,100, steine[steine.length-1 -i][j].getColor());
+                steinCircles[i][j] = new Circle(j*100+50,i*100+150,100, steine[steine.length-1 -i][j].getColor());
             }
         }
 
