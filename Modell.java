@@ -58,7 +58,14 @@ public class Modell
      */
     public int gibZeile(int spalte)
     {
-
+        for(int i = modell.length -1; i > 0 ; i--)
+        {
+            if(modell[i][spalte].getColor() == null)
+            {
+                return i;
+            }                    
+        }
+        return -1;
     }
 
     /**
@@ -77,7 +84,14 @@ public class Modell
      */
     private void spielerWechseln()
     {
-
+       if(aktuellerSpieler == spieler1)
+       {
+           aktuellerSpieler = spieler2;
+       }
+       else
+       {
+           aktuellerSpieler = spieler1;
+       }
     }
 
     /**
@@ -86,7 +100,18 @@ public class Modell
      */
     public boolean pruefeGewonnen ()
     {
-
+        if(pruefeVierInEinerSpalte() == true || pruefeVierInEinerZeile() == true)
+        {
+            return true;
+        }
+        else if(pruefeVierDiagonalLR() == true || pruefeVierDiagonalRL() == true)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     /**
@@ -113,6 +138,7 @@ public class Modell
      */
     private boolean pruefeVierDiagonalLR(Spieler pAktuellerSpieler)
     {
+
         for(int i = 0; i < 3; i++){
             for(int j = 0; j < 4; j++){
                 Color steinFarbe = modell[i][j].getColor();
@@ -128,6 +154,7 @@ public class Modell
             }
         }
         return false;
+
     }
 
     /**
