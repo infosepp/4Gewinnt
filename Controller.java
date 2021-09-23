@@ -19,8 +19,9 @@ public class Controller
      */
     public Controller()
     {
-     Anzeige Az = new Anzeige(modell);
-     Modell Ml = new Modell();
+        modell = new Modell();
+        anzeige = new Anzeige(modell);
+
     }
 
     /**
@@ -50,6 +51,6 @@ public class Controller
      */
     private void updateView()
     {
-        
+                
     }
 }

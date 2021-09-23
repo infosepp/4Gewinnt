@@ -19,7 +19,8 @@ public class Spieler
      */
     public Spieler(Color color)
     {
-        
+        this.color = color;
+
     }
 
     /**
@@ -27,7 +28,7 @@ public class Spieler
      */
     public void initSteine()
     {
-
+        steine = new Stein[21];
     }
 
     /**
@@ -37,7 +38,15 @@ public class Spieler
      */
     public boolean steineVorhanden()
     {
+        if(steine[steine.length-1] == null)
+        {
+            return true;
+        }
 
+        else
+        {
+            return false;
+        }
     }
 
     /**
@@ -76,6 +85,9 @@ public class Spieler
      */
     public Stein setzeStein()
     {
-        
+        Stein akt = steine[aktuellerStein];
+        steine[aktuellerStein] = null;
+        aktuellerStein--;
+        return akt;
     }
 }

@@ -22,7 +22,7 @@ public class Modell
         spieler1 = new Spieler(Color.red);
         spieler2 = new Spieler(Color.yellow);
     }
-    
+
     /**
      * Gibt ein 2D-Array mit allen im Attribut modell gespeicherten Steinen zurück
      * 
@@ -43,7 +43,10 @@ public class Modell
      */
     public void setzeStein(int spalte)
     {
-        
+        if (gibZeile(spalte) != -1)
+        {
+            modell[gibZeile(spalte)][spalte] = aktuellerSpieler.setzeStein();
+        }
     }
 
     /**
@@ -55,9 +58,16 @@ public class Modell
      */
     public int gibZeile(int spalte)
     {
-        
+        for(int i = modell.length -1; i > 0 ; i--)
+        {
+            if(modell[i][spalte].getColor() == null)
+            {
+                return i;
+            }                    
+        }
+        return -1;
     }
-    
+
     /**
      * Gib die Farbe des Attributes aktuellerSpieler zurück
      * 
@@ -65,16 +75,23 @@ public class Modell
      */
     public Color gibFarbeAktuellerSpieler()
     {
-        
+        return aktuellerSpieler.getColor();
     }
-    
+
     /**
      * Überprüft, welcher Spieler im Attribut AktuellerSpieler gespeichert ist und setzt den anderen 
      * Spieler als AktuellerSpieler. 
      */
     private void spielerWechseln()
     {
-       
+       if(aktuellerSpieler == spieler1)
+       {
+           aktuellerSpieler = spieler2;
+       }
+       else
+       {
+           aktuellerSpieler = spieler1;
+       }
     }
 
     /**
@@ -83,7 +100,18 @@ public class Modell
      */
     public boolean pruefeGewonnen ()
     {
-        
+        if(pruefeVierInEinerSpalte() == true || pruefeVierInEinerZeile() == true)
+        {
+            return true;
+        }
+        else if(pruefeVierDiagonalLR() == true || pruefeVierDiagonalRL() == true)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     /**
@@ -92,7 +120,7 @@ public class Modell
      */
     private boolean pruefeVierInEinerSpalte ()
     {
-        
+
     }       
 
     /**
@@ -101,7 +129,7 @@ public class Modell
      */
     private boolean pruefeVierInEinerZeile ()
     {
-        
+
     }
 
     /**
@@ -119,6 +147,6 @@ public class Modell
      */
     private boolean pruefeVierDiagonalRL ()
     {
-        
+
     }
 }
