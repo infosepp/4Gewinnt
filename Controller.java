@@ -19,7 +19,7 @@ public class Controller
      */
     public Controller()
     {
-
+        
     }
 
     /**
@@ -49,6 +49,6 @@ public class Controller
      */
     private void updateView()
     {
-        
+                
     }
 }
