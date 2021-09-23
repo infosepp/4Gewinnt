@@ -1,5 +1,4 @@
 import sas.*;
-import sasio.*;
 import java.awt.Color;
 /**
  * Die Klasse Anzeige regelt die Grafik des Spiels
@@ -13,7 +12,7 @@ public class Anzeige
     // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
     private View fenster;
     private Modell modell;
-    private Button [] buttons;
+    private Buttons [] buttons;
 
     /**
      * Konstruktor für Objekte der Klasse Anzeige
@@ -48,7 +47,7 @@ public class Anzeige
      */
     public Button [] getButtons()
     {
-
+        return buttons;
     }
 
     /**
@@ -58,7 +57,7 @@ public class Anzeige
      */
     public View getView()
     {
-
+        return fenster;
     }
 }
 
