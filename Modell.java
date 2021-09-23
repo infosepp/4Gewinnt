@@ -22,7 +22,7 @@ public class Modell
         spieler1 = new Spieler(Color.red);
         spieler2 = new Spieler(Color.yellow);
     }
-    
+
     /**
      * Gibt ein 2D-Array mit allen im Attribut modell gespeicherten Steinen zurück
      * 
@@ -43,7 +43,10 @@ public class Modell
      */
     public void setzeStein(int spalte)
     {
-        
+        if (gibZeile(spalte) != -1)
+        {
+            modell[gibZeile(spalte)][spalte] = aktuellerSpieler.setzeStein();
+        }
     }
 
     /**
@@ -55,9 +58,9 @@ public class Modell
      */
     public int gibZeile(int spalte)
     {
-        
+
     }
-    
+
     /**
      * Gib die Farbe des Attributes aktuellerSpieler zurück
      * 
@@ -67,14 +70,14 @@ public class Modell
     {
         return aktuellerSpieler.getColor();
     }
-    
+
     /**
      * Überprüft, welcher Spieler im Attribut AktuellerSpieler gespeichert ist und setzt den anderen 
      * Spieler als AktuellerSpieler. 
      */
     private void spielerWechseln()
     {
-       
+
     }
 
     /**
@@ -83,7 +86,7 @@ public class Modell
      */
     public boolean pruefeGewonnen ()
     {
-        
+
     }
 
     /**
@@ -92,7 +95,7 @@ public class Modell
      */
     private boolean pruefeVierInEinerSpalte ()
     {
-        
+
     }       
 
     /**
@@ -101,7 +104,7 @@ public class Modell
      */
     private boolean pruefeVierInEinerZeile ()
     {
-        
+
     }
 
     /**
@@ -110,7 +113,7 @@ public class Modell
      */
     private boolean pruefeVierDiagonalLR ()
     {
-        
+
     }
 
     /**
@@ -119,6 +122,6 @@ public class Modell
      */
     private boolean pruefeVierDiagonalRL ()
     {
-        
+
     }
 }
