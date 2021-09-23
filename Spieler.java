@@ -20,8 +20,7 @@ public class Spieler
     public Spieler(Color color)
     {
         this.color = color;
-        aktuellerStein = 20;
-        initSteine();
+        
     }
 
     /**
