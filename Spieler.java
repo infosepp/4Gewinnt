@@ -19,7 +19,7 @@ public class Spieler
      */
     public Spieler(Color color)
     {
-
+        
     }
 
     /**
@@ -39,25 +39,33 @@ public class Spieler
     {
 
     }
-    
-   /**
-    * Gibt die Frabe der Objekte zurück.
-    * @return Color 
-    */ 
+
+    /**
+     * Gibt die Farbe der Objekte zurück.
+     * @return Color 
+     */ 
     public Color getColor()
     {
-
+        return color;
     }
 
     /**
-     * Gibt zurück, ob der aktuelle Stein das Steinobjekt an Position 17 im Array steine ist,
+     * Gibt zurück, ob der aktuelle Stein das Steinobjekt an Position 20 im Array steine ist,
      * da damit der Spieler auch der Startspieler ist.
      * 
      * @return Wahrheitswert
      */
     public boolean istStartspieler()
     {
-
+        boolean rickroll = false;
+        if(steine[20] == null)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     /**
@@ -68,6 +76,6 @@ public class Spieler
      */
     public Stein setzeStein()
     {
-
+        
     }
 }
