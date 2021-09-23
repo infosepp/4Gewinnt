@@ -36,7 +36,7 @@ public class Anzeige
     {
         for(int i = 0; i < 700; i = i + 100)
         {
-            buttons[i/100] = new Circle(i,0, 100, 100,"V", modell.gibFarbeAktuellerSpieler());
+            buttons[i/100] = new Circle(i+50,50, 100, modell.gibFarbeAktuellerSpieler());
         }
         // weitere Spielfeldgestaltung
         Stein[][] steine = modell.gibSteine();
