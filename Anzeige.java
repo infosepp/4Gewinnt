@@ -36,13 +36,9 @@ public class Anzeige
     {
         for(int i = 0; i < 700; i = i + 100)
         {
-<<<<<<< HEAD
-            buttons[i/100] = new Button(i,0, 100, 100,"V", modell.gibFarbeAktuellerSpieler());
+            buttons[i/100] = new Circle(i+50,50,100,"V", modell.gibFarbeAktuellerSpieler());
         }
-        // weitere Spielfeldgestaltung
-=======
-            buttons[i/100] = new Circle(i+50,50, 100, modell.gibFarbeAktuellerSpieler());
-        }
+
         // weitere Spielfeldgestaltung
         Stein[][] steine = modell.gibSteine();
         
@@ -51,8 +47,7 @@ public class Anzeige
                 new Circle(j*100+50,i*100+150,100, steine[steine.length-1 -i][j].getColor());
             }
         }
-        
->>>>>>> 345a1e42d0fdc79ddccb749bbb9557d1538cb201
+
     }
 
     /**
@@ -62,11 +57,7 @@ public class Anzeige
      */
     public Circle [] getButtons()
     {
-<<<<<<< HEAD
-
-=======
         return buttons;
->>>>>>> d94246adf4e6f54eb921123d1b8ad06d3db05650
     }
 
     /**
