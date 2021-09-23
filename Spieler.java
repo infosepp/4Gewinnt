@@ -20,7 +20,7 @@ public class Spieler
     public Spieler(Color color)
     {
         this.color = color;
-        
+        aktuellerStein = 21;
     }
     
     /**
@@ -38,7 +38,7 @@ public class Spieler
      */
     public boolean steineVorhanden()
     {
-        if(steine[steine.length-1] == null)
+        if(aktuellerStein > 0)
         {
             return true;
         }
