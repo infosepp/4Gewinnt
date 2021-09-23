@@ -95,8 +95,25 @@ public class Modell
      */
     private boolean pruefeVierInEinerSpalte ()
     {
-
-    }       
+        
+        for (int i=0; i < modell[0].length; i++)
+        {
+            for (int j= modell.length-1; j > 2; j--)
+            {
+                if (modell[i][j].getColor() == aktuellerSpieler.getColor() && modell[i][j] != null)
+                {
+                    if (
+                    modell[i-1][j].getColor() == aktuellerSpieler.getColor() &&
+                    modell[i-2][j].getColor() == aktuellerSpieler.getColor() &&
+                    modell[i-3][j].getColor() == aktuellerSpieler.getColor())
+                    {
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
+    }
 
     /**
      * Wenn vier Steine einer gleichen Farbe in einer Zeile nebeneinanderliegen gebe true zurück, ansonsten false.
