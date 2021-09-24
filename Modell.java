@@ -183,9 +183,7 @@ public class Modell
                     if(steinFarbe == modell[i+1][j+1].getColor() && 
                     steinFarbe == modell[i+2][j+2].getColor() &&
                     steinFarbe == modell[i+3][j+3].getColor()){
-
                         return true;
-
                     }
                 }
             }
