@@ -68,6 +68,7 @@ public class Modell
             }                    
         }
         return -1;
+
     }
 
     /**
@@ -114,6 +115,7 @@ public class Modell
         {
             return false;
         }
+
     }
 
     /**
@@ -122,6 +124,7 @@ public class Modell
      */
     private boolean pruefeVierInEinerSpalte ()
     {
+        
         for (int i=0; i < modell[0].length; i++)
         {
             for (int j= modell.length-1; j > 2; j--)
@@ -174,12 +177,13 @@ public class Modell
      * Wenn vier Steine einer Farbe in einer Diagonalen von links nach rechts vorhanden sind, gebe true zurück, ansonsten false.
      * @return Wahrheitswert
      */
-    private boolean pruefeVierDiagonalLR(Spieler pAktuellerSpieler)
+    private boolean pruefeVierDiagonalLR()
     {
+        
         for(int i = 0; i < 3; i++){
             for(int j = 0; j < 4; j++){
                 Color steinFarbe = modell[i][j].getColor();
-                if(steinFarbe == pAktuellerSpieler.getColor()){
+                if(steinFarbe == aktuellerSpieler.getColor()){
                     if(steinFarbe == modell[i+1][j+1].getColor() && 
                     steinFarbe == modell[i+2][j+2].getColor() &&
                     steinFarbe == modell[i+3][j+3].getColor()){
@@ -189,6 +193,7 @@ public class Modell
             }
         }
         return false;
+        
     }
 
     /**
