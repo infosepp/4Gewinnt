@@ -1,4 +1,6 @@
 import java.awt.Color;
+import java.util.Arrays;
+
 /**
  * Beschreiben Sie hier die Klasse Modell.
  * 
@@ -120,7 +122,6 @@ public class Modell
      */
     private boolean pruefeVierInEinerSpalte ()
     {
-        
         for (int i=0; i < modell[0].length; i++)
         {
             for (int j= modell.length-1; j > 2; j--)
@@ -139,14 +140,34 @@ public class Modell
         }
         return false;
     }
-
+    
     /**
      * Wenn vier Steine einer gleichen Farbe in einer Zeile nebeneinanderliegen gebe true zurück, ansonsten false.
      * @return Wahrheitswert
      */
     private boolean pruefeVierInEinerZeile ()
     {
-
+        Color col = gibFarbeAktuellerSpieler();
+        for(int i = 0; i < 6; i++)
+        {
+            for(int j = 0; j < 4; j++)
+            {
+                if(modell[i][j] != null)
+                {
+                    if(modell[i][j].getColor() == col)
+                    {
+                        if(modell[i][j+1] != null && modell[i][j+2] != null && modell[i][j+3] != null)
+                        {
+                            if(modell[i][j+1].getColor() == col && modell[i][j+2].getColor() == col && modell[i][j+3].getColor() == col)
+                            {
+                                return true;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        return false;
     }
 
     /**

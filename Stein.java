@@ -26,7 +26,10 @@ public class Stein
      * @param color Farbe des Steins
      */
     public Stein(int x, int y, int radius, Color color) {
-        
+        this.x = x;
+        this.y = y;
+        this.radius = radius;
+        this.color = color;
     }
     
     /**
@@ -36,7 +39,8 @@ public class Stein
      * @param color Farbe des Steins
      */
     public Stein(int radius, Color color) {
-        
+        this.radius = radius;
+        this.color = color;
     }
     
     /**
@@ -46,7 +50,7 @@ public class Stein
      */
     public int getX()
     {
-        
+        return x;
     }
     
     /**
@@ -56,7 +60,7 @@ public class Stein
      */
     public int getY()
     {
-        
+        return y;
     }
     
     /**
@@ -64,9 +68,9 @@ public class Stein
      * 
      * @param x - neue x-Koordinate des Steins
      */
-    public void setX(int x)
+    public void setX(int newX)
     {
-        
+        int x = newX;
     }
     
     /**
@@ -74,9 +78,9 @@ public class Stein
      * 
      * @param y - neue y-Koordinate des Steins
      */
-    public void setY(int y)
+    public void setY(int newY)
     {
-        
+        int y = newY;
     }
     
     /**
@@ -86,7 +90,7 @@ public class Stein
      */
     public int getRadius()
     {
-        
+        return radius;
     }
     
     /**
@@ -96,6 +100,6 @@ public class Stein
      */
     public Color getColor()
     {
-        
+        return color;
     }
 }
