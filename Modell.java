@@ -4,7 +4,7 @@ import java.util.Arrays;
 /**
  * Beschreiben Sie hier die Klasse Modell.
  * 
- * @author (Henning Ainödhofer) 
+ * @author (Anna, Antonia, Florian) 
  * @version (22.09.21, 16:20)
  */
 public class Modell
@@ -202,16 +202,19 @@ public class Modell
      */
     private boolean pruefeVierDiagonalRL ()
     {
+        int gleiche = 0;
+        Color aktuelleFarbe;
         for (int i = 0; i < modell.length; i++)
         {
             for (int j= 3; j < modell[i].length; j++)
             {
                if (modell[i][j].getColor() != null)
                {
-                   int gleiche = 0; 
+                   gleiche = 0;
+                   aktuelleFarbe = modell[i][j].getColor();
                    for (int k = 0; k < 4; k++)
                    {
-                       if (modell[i-k][j-k].getColor() == modell[i][j].getColor())
+                       if (modell[i-k][j-k].getColor() == aktuelleFarbe)
                        {
                            gleiche++;
                        }
