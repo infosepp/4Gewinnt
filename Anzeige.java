@@ -14,7 +14,6 @@ public class Anzeige
     private View fenster;
     private Modell modell;
     private Circle [] buttons;
-    private Circle [][]steinCircles;
 
     /**
      * Konstruktor für Objekte der Klasse Anzeige
@@ -23,7 +22,9 @@ public class Anzeige
     public Anzeige(Modell modell)
     {
         fenster = new View(700, 700, "4 Gewinnt");
-        steinCircles = new Circle[6][7];
+        this.modell = modell;
+        buttons = new Circle[7];
+        updateView();
     }
 
     /**
@@ -38,19 +39,23 @@ public class Anzeige
     {
         for(int i = 0; i < 700; i = i + 100)
         {
-            buttons[i/100] = new Circle(i+50,50,100,modell.gibFarbeAktuellerSpieler());
+            buttons[i/100] = new Circle(i,0, 50, modell.gibFarbeAktuellerSpieler());
         }
-
-        // weitere Spielfeldgestaltung
-        Stein[][] steine = modell.gibSteine();
-        
-        for(int i = 0; i< steine.length; i++){
-            for(int j = 0; j< steine[i].length; j++){
-                
-                if( steine[steine.length-1 -i][j].getColor() == null){
-                    steinCircles[i][j] = new Circle(j*100+50,i*100+150,100, Color.white);
-                }else{
-                    steinCircles[i][j] = new Circle(j*100+50,i*100+150,100, steine[steine.length-1 -i][j].getColor());
+        for(int i = 100; i < 700; i = i + 100)
+        {
+            new Rectangle(i,100, 5, 600, Color.black);
+        }
+        for(int i = 100; i < 700; i = i + 100)
+        {
+            new Rectangle(0,i, 700, 5, Color.black);
+        }
+        for(int i  = 0; i < modell.gibSteine().length; i++)
+        {
+            for(int j = 0; j < modell.gibSteine()[0].length; j++)
+            {
+                if(modell.gibSteine()[i][j] != null)
+                {
+                    new Circle(modell.gibSteine()[i][j].getX(), modell.gibSteine()[i][j].getY(), modell.gibSteine()[i][j].getRadius() ,modell.gibSteine()[i][j].getColor());
                 }
             }
         }

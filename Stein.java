@@ -70,7 +70,7 @@ public class Stein
      */
     public void setX(int newX)
     {
-        int x = newX;
+        x = newX;
     }
     
     /**
@@ -80,7 +80,7 @@ public class Stein
      */
     public void setY(int newY)
     {
-        int y = newY;
+        y = newY;
     }
     
     /**

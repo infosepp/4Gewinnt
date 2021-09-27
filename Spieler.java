@@ -19,9 +19,9 @@ public class Spieler
      */
     public Spieler(Color color)
     {
-    this.color = color;
-    aktuellerStein = 20;
-    initSteine();
+        this.color = color;
+        aktuellerStein = 20;
+        initSteine();
     }
 
     /**
@@ -32,7 +32,7 @@ public class Spieler
         steine = new Stein[21];
         for(int i = 0; i <= steine.length-1; i++)
         {
-         steine[i] = new Stein(7, 6,10, color);   
+            steine[i] = new Stein(40, color);   
         }
     }
 

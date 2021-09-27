@@ -23,6 +23,7 @@ public class Modell
         modell = new Stein[6][7];
         spieler1 = new Spieler(Color.red);
         spieler2 = new Spieler(Color.yellow);
+        aktuellerSpieler = spieler1;
     }
 
     /**
@@ -45,9 +46,20 @@ public class Modell
      */
     public void setzeStein(int spalte)
     {
-        if (gibZeile(spalte) != -1)
+        if(aktuellerSpieler.steineVorhanden())
         {
-            modell[gibZeile(spalte)][spalte] = aktuellerSpieler.setzeStein();
+            Stein aktuell = aktuellerSpieler.setzeStein();
+            aktuell.setX(spalte*100+10);
+            int zeile = gibZeile(spalte);
+            if(zeile != -1)
+            {
+                aktuell.setY(zeile * 100+110);
+                modell[zeile][spalte] = aktuell;
+                if(pruefeGewonnen() == false)
+                {
+                    spielerWechseln();
+                }
+            }
         }
     }
 
@@ -60,15 +72,17 @@ public class Modell
      */
     public int gibZeile(int spalte)
     {
-        for(int i = modell.length -1; i > 0 ; i--)
+        if(modell[0][spalte] == null)
         {
-            if(modell[i][spalte].getColor() == null)
+            int i = modell.length-1;
+            while(modell[i][spalte] != null)
             {
-                return i;
-            }                    
+                i = i - 1;
+            }
+            System.out.println(i);
+            return i;
         }
         return -1;
-
     }
 
     /**
@@ -87,14 +101,14 @@ public class Modell
      */
     private void spielerWechseln()
     {
-       if(aktuellerSpieler == spieler1)
-       {
-           aktuellerSpieler = spieler2;
-       }
-       else
-       {
-           aktuellerSpieler = spieler1;
-       }
+        if(aktuellerSpieler == spieler1)
+        {
+            aktuellerSpieler = spieler2;
+        }
+        else
+        {
+            aktuellerSpieler = spieler1;
+        }
     }
 
     /**
@@ -124,26 +138,31 @@ public class Modell
      */
     private boolean pruefeVierInEinerSpalte ()
     {
-        
-        for (int i=0; i < modell[0].length; i++)
+        for (int i = 0; i < modell.length; i++)
         {
-            for (int j= modell.length-1; j > 2; j--)
+            for (int j = modell[0].length-1; j > 0; j--)
             {
-                if (modell[i][j].getColor() == aktuellerSpieler.getColor() && modell[i][j] != null)
+                if(modell[i][j] != null)
                 {
-                    if (
-                    modell[i-1][j].getColor() == aktuellerSpieler.getColor() &&
-                    modell[i-2][j].getColor() == aktuellerSpieler.getColor() &&
-                    modell[i-3][j].getColor() == aktuellerSpieler.getColor())
+                    if (modell[i][j].getColor().equals(aktuellerSpieler.getColor()) == true)
                     {
-                        return true;
+                        if (j > 3)
+                        {
+                            if(modell[i][j-1] != null && modell[i][j-2] != null && modell[i][j-3] != null)
+                            {
+                                if ((modell[i][j-1].getColor().equals(aktuellerSpieler.getColor()) == true) && (modell[i][j-2].getColor().equals(aktuellerSpieler.getColor()) == true) && (modell[i][j-3]).getColor().equals(aktuellerSpieler.getColor()) == true)
+                                {
+                                    return true;
+                                }
+                            }
+                        }
                     }
                 }
             }
         }
         return false;
     }
-    
+
     /**
      * Wenn vier Steine einer gleichen Farbe in einer Zeile nebeneinanderliegen gebe true zurück, ansonsten false.
      * @return Wahrheitswert
@@ -155,17 +174,11 @@ public class Modell
         {
             for(int j = 0; j < 4; j++)
             {
-                if(modell[i][j] != null)
+                if(modell[i][j] != null && modell[i][j+1] != null && modell[i][j+2] != null && modell[i][j+3] != null)
                 {
-                    if(modell[i][j].getColor() == col)
+                    if(modell[i][j].getColor() == col && modell[i][j+1].getColor() == col && modell[i][j+2].getColor() == col && modell[i][j+3].getColor() == col)
                     {
-                        if(modell[i][j+1] != null && modell[i][j+2] != null && modell[i][j+3] != null)
-                        {
-                            if(modell[i][j+1].getColor() == col && modell[i][j+2].getColor() == col && modell[i][j+3].getColor() == col)
-                            {
-                                return true;
-                            }
-                        }
+                        return true;
                     }
                 }
             }
@@ -179,21 +192,24 @@ public class Modell
      */
     private boolean pruefeVierDiagonalLR()
     {
-        
+
         for(int i = 0; i < 3; i++){
             for(int j = 0; j < 4; j++){
-                Color steinFarbe = modell[i][j].getColor();
-                if(steinFarbe == aktuellerSpieler.getColor()){
-                    if(steinFarbe == modell[i+1][j+1].getColor() && 
-                    steinFarbe == modell[i+2][j+2].getColor() &&
-                    steinFarbe == modell[i+3][j+3].getColor()){
-                        return true;
+                if(modell[i][j] != null)
+                {
+                    Color steinFarbe = modell[i][j].getColor();
+                    if(steinFarbe == aktuellerSpieler.getColor()){
+                        if(steinFarbe == modell[i+1][j+1].getColor() && 
+                        steinFarbe == modell[i+2][j+2].getColor() &&
+                        steinFarbe == modell[i+3][j+3].getColor()){
+                            return true;
+                        }
                     }
                 }
             }
         }
         return false;
-        
+
     }
 
     /**
@@ -202,28 +218,26 @@ public class Modell
      */
     private boolean pruefeVierDiagonalRL ()
     {
-        int gleiche = 0;
-        Color aktuelleFarbe;
-        for (int i = 0; i < modell.length; i++)
+        for (int i = modell.length-1; i >= 0; i--)
         {
-            for (int j= 3; j < modell[i].length; j++)
+            for (int j = modell[0].length-1; j > 0; j--)
             {
-               if (modell[i][j].getColor() != null)
-               {
-                   gleiche = 0;
-                   aktuelleFarbe = modell[i][j].getColor();
-                   for (int k = 0; k < 4; k++)
-                   {
-                       if (modell[i-k][j-k].getColor() == aktuelleFarbe)
-                       {
-                           gleiche++;
-                       }
-                   }
-                   if (gleiche == 4)
-                   {
-                       return true;
-                   }
-               }
+                if(modell[i][j] != null)
+                {
+                    if (modell[i][j].getColor().equals(aktuellerSpieler.getColor()) == true)
+                    {
+                        if (j > 2 && i > 2)
+                        {
+                            if(modell[i-1][j-1] != null && modell[i-2][j-2] != null && modell[i-3][j-3] != null)
+                            {
+                                if ((modell[i-1][j-1].getColor().equals(aktuellerSpieler.getColor()) == true) && (modell[i-2][j-2].getColor().equals(aktuellerSpieler.getColor()) == true) && (modell[i-3][j-3]).getColor().equals(aktuellerSpieler.getColor()) == true)
+                                {
+                                    return true;
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
         return false;

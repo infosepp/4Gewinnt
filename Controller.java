@@ -21,7 +21,6 @@ public class Controller
     {
         modell = new Modell();
         anzeige = new Anzeige(modell);
-
     }
 
     /**
@@ -30,11 +29,12 @@ public class Controller
      */
     public void spielen()
     {
+        updateView();
         while(modell.pruefeGewonnen() == false)
         {
             for(int i = 0; i < anzeige.getButtons().length; i++)
             {
-                if(anzeige.getButtons()[i].clicked())
+                if(anzeige.getButtons()[i].mouseClicked())
                 {
                     modell.setzeStein(i);
                     updateView();
@@ -43,7 +43,7 @@ public class Controller
             anzeige.getView().wait(10);
         }
     }
-    
+
     /**
      * 
      * Diese Methode aktualisiert das View-Objekt
@@ -51,6 +51,6 @@ public class Controller
      */
     private void updateView()
     {
-                
+        anzeige.updateView();
     }
 }
